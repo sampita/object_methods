@@ -22,3 +22,35 @@ console.log(Object.values(bill))
 
 
 //For Of with Object.keys()
+let domOutput = ""
+const arrayOfKeys = Object.keys(bill)
+
+for (const keyName of arrayOfKeys) {
+    console.log(keyName)
+    domOutput += `<span>${keyName}</span>`
+}
+
+//console.log(domOutput)
+
+const containerRef = document.getElementById("app")
+containerRef.innerHTML = `<section>${domOutput}</section>`
+
+
+//For Of with Object.entries()
+const dinner = {
+    name: "pizza",
+    size: "large",
+    weight: "75 lbs",
+    ethnicity: "Chicago",
+    vegetarian: false
+}
+
+let dinnerDomOutput = ""
+
+for (const keyValueArray of Object.entries(dinner)) {
+    console.log(keyValueArray)
+    dinnerDomOutput += `<p>Key: ${keyValueArray[0]} Value: ${keyValueArray[1]}</p>`
+}
+
+containerRef.innerHTML += `<article>${dinnerDomOutput}</article>`
+
