@@ -1,4 +1,4 @@
-//For Of with Object.keys()
+//For Of with Object.values()
 
 const outputElement = document.querySelector("#app")
 const dateVisited = "visitDate"
@@ -21,3 +21,4 @@ console.log (bill[dateVisited], bill[owed], bill[patient])
 console.log(Object.values(bill))
 
 
+//For Of with Object.keys()
